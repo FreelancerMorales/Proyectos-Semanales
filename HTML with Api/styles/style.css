@@ -95,6 +95,13 @@ button:focus {
     border: 1px solid #ccc;
 }
 
+/* Estilos loading */
+#loading {
+    font-size: 1.2rem;
+    color: #4CAF50;
+    margin-top: 1rem;
+}
+
 /* Diseño Responsivo */
 @media (max-width: 768px) {
     body {
