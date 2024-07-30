@@ -1,0 +1,47 @@
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    header, footer, main {
+        padding: 1rem;
+    }
+
+    #data-section, #input-section, #history-section {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    #city-input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        width: 100%;
+        display: inline-block;
+    }
+
+    #forecast-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forecast-item {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Diseño adicional para tablets */
+@media (max-width: 1024px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    #city-input {
+        width: 60%;
+    }
+}

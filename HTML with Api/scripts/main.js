@@ -1,22 +1,9 @@
-// Animaciones
-
-function showLoading() {
-    const loading = document.getElementById('loading');
-    loading.classList.add('visible');
-    document.getElementById('data-container').innerHTML = '';
-    document.getElementById('forecast-container').innerHTML = '';
-}
-
-function hideLoading() {
-    const loading = document.getElementById('loading');
-    loading.classList.remove('visible');
-}
-
 // script.js
 
 document.getElementById('search-button').addEventListener('click', handleSearch);
 
 function handleSearch() {
+    document.getElementById('data-section').style.display = 'block';
     const city = document.getElementById('city-input').value.trim();
     if (!isValidCity(city)) {
         alert('Por favor, ingresa el nombre de una ciudad válida (solo letras y espacios).');

@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Información Dinámica</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/color.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
     <header>
@@ -17,7 +20,7 @@
             <div id="autocomplete-container"></div>
             <button id="search-button">Buscar</button>
         </section>
-        <section id="data-section">
+        <section id="data-section" style="display: none;">
             <div id="loading" style="display:none;">Cargando...</div>
             <div id="data-container"></div>
             <div id="forecast-container"></div>
@@ -30,6 +33,7 @@
     <footer>
         <p>&copy; 2024 Información Dinámica</p>
     </footer>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animation.js"></script>
 </body>
 </html>
