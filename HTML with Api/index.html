@@ -11,19 +11,20 @@
         <h1>Información Dinámica</h1>
     </header>
     <main>
-        <!-- Añadir esto en el main antes de la sección de datos -->
         <section id="input-section">
             <h2>Busca el clima por ciudad</h2>
-            <input type="text" id="city-input" placeholder="Ingresa una ciudad...">
+            <input type="text" id="city-input" placeholder="Ejemplo: London">
+            <div id="autocomplete-container"></div>
             <button id="search-button">Buscar</button>
         </section>
-
         <section id="data-section">
-            <h2>Datos de la API</h2>
-            <div id="data-container">
-                <div id="loading" style="display:none;">Cargando...</div>
-                <!-- Datos dinámicos serán mostrados aquí -->
-            </div>
+            <div id="loading" style="display:none;">Cargando...</div>
+            <div id="data-container"></div>
+            <div id="forecast-container"></div>
+        </section>
+        <section id="history-section">
+            <h2>Historial de Búsquedas</h2>
+            <ul id="search-history"></ul>
         </section>
     </main>
     <footer>
