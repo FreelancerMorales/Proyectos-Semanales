@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding: 0 1rem;
+    padding: 0rem;
 }
 
 /* Estilos de layout */
@@ -243,10 +243,6 @@ button:focus {
 
 /* Diseño adicional para tablets */
 @media (max-width: 1024px) {
-    body {
-        padding: 0 0.5rem;
-    }
-
     main {
         padding: 1.5rem;
     }
