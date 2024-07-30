@@ -41,6 +41,14 @@ main {
     text-align: center;
 }
 
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
 /* Estilos de secciones */
 #data-section, #input-section {
     background: #fff;
