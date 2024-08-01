@@ -96,7 +96,24 @@ function saveToHistory(city) {
 function displaySearchHistory() {
     const history = JSON.parse(localStorage.getItem('searchHistory')) || [];
     const historyContainer = document.getElementById('search-history');
-    historyContainer.innerHTML = history.map(city => `<li>${city}</li>`).join('');
+    historyContainer.innerHTML = history.map(city => `
+        <li>${city}
+            <button class="btnHistory" onclick="deleteItem('${city}', this);">Delete</button>
+        </li>
+        `).join('');
+}
+
+function deleteItem(city, buttonElement) {
+    buttonElement.parentNode.remove();
+
+    const history = JSON.parse(localStorage.getItem('searchHistory'));
+    const index = history.indexOf(city);
+    if (index !== -1) {
+
+        history.splice(index, 1);
+
+        localStorage.setItem('searchHistory', JSON.stringify(history));
+    }
 }
 
 // Mostrar historial al cargar la página
