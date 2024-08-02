@@ -54,12 +54,39 @@ function fetchForecastData(city) {
         });
 }
 
+// Función para obtener el emoji del clima
+function getWeatherEmoji(description) {
+    switch(description.toLowerCase()) {
+        case 'cielo claro': return '☀️';
+        case 'algo de nubes': return '🌤';
+        case 'nubes dispersas': return '☁️';
+        case 'nubes': return '☁️';
+        case 'lluvia ligera': return '🌧';
+        case 'lluvia': return '🌧';
+        case 'tormenta': return '⛈';
+        case 'nieve': return '❄️';
+        case 'niebla': return '🌫';
+        default: return '';
+    }
+}
+
+// Función para obtener el emoji de la bandera del país
+function getCountryFlag(countryCode) {
+    const codePoints = countryCode
+        .toUpperCase()
+        .split('')
+        .map(char => 127397 + char.charCodeAt());
+    return String.fromCodePoint(...codePoints);
+}
+
 function displayWeatherData(data) {
     const dataContainer = document.getElementById('data-container');
+    const weatherEmoji = getWeatherEmoji(data.weather[0].description);
+    const countryFlag = getCountryFlag(data.sys.country);
     dataContainer.innerHTML = `
-        <h3>${data.name}, ${data.sys.country}</h3>
+        <h3>${data.name}, ${countryFlag}</h3>
         <p>Temperatura: ${data.main.temp.toFixed(1)}°C</p>
-        <p>Clima: ${data.weather[0].description}</p>
+        <p>Clima: ${weatherEmoji} ${data.weather[0].description}</p>
         <p>Humedad: ${data.main.humidity}%</p>
         <p>Viento: ${data.wind.speed} m/s</p>
     `;
@@ -69,15 +96,36 @@ function displayForecastData(data) {
     const forecastContainer = document.getElementById('forecast-container');
     forecastContainer.innerHTML = data.list
         .filter((_, index) => index % 8 === 0) // Filtra para obtener datos cada 24 horas (8 intervalos de 3 horas)
-        .map(forecast => `
-            <div class="forecast-item">
-                <h4>${new Date(forecast.dt_txt).toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'short' })}</h4>
-                <p>Temp: ${forecast.main.temp.toFixed(1)}°C</p>
-                <p>${forecast.weather[0].description}</p>
-            </div>
-        `)
+        .map(forecast => {
+            const weatherEmoji = getWeatherEmoji(forecast.weather[0].description);
+            return `
+                <div class="forecast-item">
+                    <h4>${new Date(forecast.dt_txt).toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'short' })}</h4>
+                    <p>Temp: ${forecast.main.temp.toFixed(1)}°C</p>
+                    <p>${weatherEmoji} ${forecast.weather[0].description}</p>
+                </div>
+            `;
+        })
         .join('');
 }
+
+function displayForecastData(data) {
+    const forecastContainer = document.getElementById('forecast-container');
+    forecastContainer.innerHTML = data.list
+        .filter((_, index) => index % 8 === 0) // Filtra para obtener datos cada 24 horas (8 intervalos de 3 horas)
+        .map(forecast => {
+            const weatherEmoji = getWeatherEmoji(forecast.weather[0].description);
+            return `
+                <div class="forecast-item">
+                    <h4>${new Date(forecast.dt_txt).toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'short' })}</h4>
+                    <p>Temp: ${forecast.main.temp.toFixed(1)}°C</p>
+                    <p>${weatherEmoji} ${forecast.weather[0].description}</p>
+                </div>
+            `;
+        })
+        .join('');
+}
+
 
 function handleError(error) {
     const dataContainer = document.getElementById('data-container');
@@ -137,7 +185,10 @@ function handleInput() {
 }
 
 function fetchAutocompleteSuggestions(query) {
-    const suggestions = ['London', 'Los Angeles', 'Lisbon', 'Lima', 'Lagos', 'Lyon', 'Taxisco', 'Guatemala', 'México', 'Argentina', 'Salvador'].filter(city => city.toLowerCase().includes(query));
+    const suggestions = [
+        'London', 'Los Angeles', 'Lisbon', 'Lima', 'Lagos', 'Lyon',
+        'Guatemala', 'México', 'Argentina', 'Salvador'
+    ].filter(city => city.toLowerCase().includes(query));
     return Promise.resolve(suggestions);
 }
 

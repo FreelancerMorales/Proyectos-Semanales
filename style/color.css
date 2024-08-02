@@ -16,7 +16,9 @@
     --color-text-secondary-light: #757575; /*Bordes 2'*/
     --color-accent-primary-light: #6200EE; /*Bordes Acentos'*/
     --color-accent-secondary-light: #018786;
-    --color-error-light: #B00020; /*Bordes Error'*/
+    --color-accent-secondary-hover-light: #017165;
+    --color-error-hover-light: #B00020; /*Bordes Error'*/
+    --color-error-light:#D32F2F; /*Bordes Error'*/
     --color-link-light: #1A73E8;
 }
 
@@ -66,7 +68,7 @@
     }
 /* Select End */
 
-/* Link start */
+/* button and link start */
     a{
         color: var(--color-link-light);
     }
@@ -81,8 +83,7 @@
     }
 
     button:hover {
-        background-color: var(--color-accent-primary-light);
-        color: var(--color-bg-light);
+        background-color: var(--color-accent-secondary-hover-light);
     }
 
     button:focus {
@@ -93,4 +94,8 @@
     .btnHistory{
         background-color: var(--color-error-light);
     }
-/* Link End */
+    
+    .btnHistory:hover{
+        background-color: var(--color-error-hover-light);
+    }
+/* button and link End */
