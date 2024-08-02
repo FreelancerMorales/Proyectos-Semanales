@@ -70,7 +70,6 @@ function getWeatherEmoji(description) {
     }
 }
 
-// Función para obtener el emoji de la bandera del país
 function getCountryFlag(countryCode) {
     const codePoints = countryCode
         .toUpperCase()
@@ -82,15 +81,16 @@ function getCountryFlag(countryCode) {
 function displayWeatherData(data) {
     const dataContainer = document.getElementById('data-container');
     const weatherEmoji = getWeatherEmoji(data.weather[0].description);
-    const countryFlag = getCountryFlag(data.sys.country);
+    const countryFlagClass = `flag-icon flag-icon-${data.sys.country.toLowerCase()}`;
     dataContainer.innerHTML = `
-        <h3>${data.name}, ${countryFlag}</h3>
+        <h3>${data.name}, <span class="${countryFlagClass}"></span></h3>
         <p>Temperatura: ${data.main.temp.toFixed(1)}°C</p>
         <p>Clima: ${weatherEmoji} ${data.weather[0].description}</p>
         <p>Humedad: ${data.main.humidity}%</p>
         <p>Viento: ${data.wind.speed} m/s</p>
     `;
 }
+
 
 function displayForecastData(data) {
     const forecastContainer = document.getElementById('forecast-container');
