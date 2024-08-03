@@ -65,20 +65,36 @@
 }
 
 /* Estilos de pronóstico extendido */
-#forecast-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2rem;
-}
+    #forecast-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
 
-.forecast-item {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    text-align: center;
-}
+    .forecast-item {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        width: 150px;
+        text-align: center;
+    }
+
+    .forecast-title{
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .forecast-temp{
+        
+    }
+
+    .forecast-weather{
+        font-size: 1.2rem;
+    }
+
+    .forecast-icon{
+    }
 
 /* Estilos para el contenedor de autocompletado */
 #autocomplete-container {

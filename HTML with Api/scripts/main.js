@@ -60,8 +60,8 @@ function getWeatherEmoji(description) {
         case 'cielo claro': return '☀️';
         case 'algo de nubes': return '🌤';
         case 'nubes dispersas': return '☁️';
-        case 'nubes': return '☁️';
-        case 'lluvia ligera': return '🌧';
+        case 'nubes': return '<i class="bi bi-clouds"></i>';
+        case 'lluvia ligera': return '<i class="bi bi-cloud-drizzle"></i>';
         case 'lluvia': return '🌧';
         case 'tormenta': return '⛈';
         case 'nieve': return '❄️';
@@ -75,7 +75,7 @@ function displayWeatherData(data) {
     const weatherEmoji = getWeatherEmoji(data.weather[0].description);
     const countryFlagClass = `flag-icon flag-icon-${data.sys.country.toLowerCase()}`;
     dataContainer.innerHTML = `
-        <h3>${data.name}, <span class="${countryFlagClass}"></span></h3>
+        <h3>${data.name}, ${data.sys.country} <span class="${countryFlagClass}"></span></h3>
         <p>Temperatura: ${data.main.temp.toFixed(1)}°C</p>
         <p>Clima: ${weatherEmoji} ${data.weather[0].description}</p>
         <p>Humedad: ${data.main.humidity}%</p>
@@ -91,32 +91,15 @@ function displayForecastData(data) {
             const weatherEmoji = getWeatherEmoji(forecast.weather[0].description);
             return `
                 <div class="forecast-item">
-                    <h4>${new Date(forecast.dt_txt).toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'short' })}</h4>
-                    <p>Temp: ${forecast.main.temp.toFixed(1)}°C</p>
-                    <p>${weatherEmoji} ${forecast.weather[0].description}</p>
+                    <h4 class="forecast-title">${new Date(forecast.dt_txt).toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'short' })}</h4>
+                    <p class="forecast-temp">Temp: ${forecast.main.temp.toFixed(1)}°C</p>
+                    <p class="forecast-weather">${forecast.weather[0].description}</p>
+                    <p class="forecast-icon">${weatherEmoji}</p>
                 </div>
             `;
         })
         .join('');
 }
-
-function displayForecastData(data) {
-    const forecastContainer = document.getElementById('forecast-container');
-    forecastContainer.innerHTML = data.list
-        .filter((_, index) => index % 8 === 0) // Filtra para obtener datos cada 24 horas (8 intervalos de 3 horas)
-        .map(forecast => {
-            const weatherEmoji = getWeatherEmoji(forecast.weather[0].description);
-            return `
-                <div class="forecast-item">
-                    <h4>${new Date(forecast.dt_txt).toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'short' })}</h4>
-                    <p>Temp: ${forecast.main.temp.toFixed(1)}°C</p>
-                    <p>${weatherEmoji} ${forecast.weather[0].description}</p>
-                </div>
-            `;
-        })
-        .join('');
-}
-
 
 function handleError(error) {
     const dataContainer = document.getElementById('data-container');
