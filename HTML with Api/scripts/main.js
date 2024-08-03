@@ -70,14 +70,6 @@ function getWeatherEmoji(description) {
     }
 }
 
-function getCountryFlag(countryCode) {
-    const codePoints = countryCode
-        .toUpperCase()
-        .split('')
-        .map(char => 127397 + char.charCodeAt());
-    return String.fromCodePoint(...codePoints);
-}
-
 function displayWeatherData(data) {
     const dataContainer = document.getElementById('data-container');
     const weatherEmoji = getWeatherEmoji(data.weather[0].description);
@@ -90,7 +82,6 @@ function displayWeatherData(data) {
         <p>Viento: ${data.wind.speed} m/s</p>
     `;
 }
-
 
 function displayForecastData(data) {
     const forecastContainer = document.getElementById('forecast-container');
