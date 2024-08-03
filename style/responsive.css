@@ -33,6 +33,9 @@
         width: 100%;
         margin: 0.5rem 0;
     }
+    .forecast-title{
+        width: 80%;
+    }
 }
 
 /* Diseño adicional para tablets */

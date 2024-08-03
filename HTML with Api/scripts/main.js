@@ -57,16 +57,18 @@ function fetchForecastData(city) {
 // Función para obtener el emoji del clima
 function getWeatherEmoji(description) {
     switch(description.toLowerCase()) {
-        case 'cielo claro': return '☀️';
-        case 'algo de nubes': return '🌤';
-        case 'nubes dispersas': return '☁️';
+        case 'cielo claro': return '<i class="bi bi-sun"></i>';
+        case 'algo de nubes': return '<i class="bi bi-cloud-sun"></i>';
+        case 'nubes dispersas': return '<i class="bi bi-cloud"></i>';
+        case 'nubes quebradas': return '<i class="bi bi-cloud"></i>';
         case 'nubes': return '<i class="bi bi-clouds"></i>';
         case 'lluvia ligera': return '<i class="bi bi-cloud-drizzle"></i>';
-        case 'lluvia': return '🌧';
-        case 'tormenta': return '⛈';
-        case 'nieve': return '❄️';
-        case 'niebla': return '🌫';
-        default: return '';
+        case 'lluvia moderada': return '<i class="bi bi-cloud-rain"></i>';
+        case 'lluvia': return '<i class="bi bi-cloud-rain"></i>';
+        case 'tormenta': return '<i class="bi bi-cloud-lightning-rain"></i>';
+        case 'nieve': return '<i class="bi bi-cloud-snow"></i>';
+        case 'niebla': return '<i class="bi bi-cloud-fog2"></i>';
+        default: return '<i class="bi bi-radioactive"></i>';
     }
 }
 
@@ -77,10 +79,12 @@ function displayWeatherData(data) {
     dataContainer.innerHTML = `
         <h3>${data.name}, ${data.sys.country} <span class="${countryFlagClass}"></span></h3>
         <p>Temperatura: ${data.main.temp.toFixed(1)}°C</p>
-        <p>Clima: ${weatherEmoji} ${data.weather[0].description}</p>
+        <p>Clima: ${data.weather[0].description} ${weatherEmoji}</p>
         <p>Humedad: ${data.main.humidity}%</p>
         <p>Viento: ${data.wind.speed} m/s</p>
     `;
+
+    console.log(data);
 }
 
 function displayForecastData(data) {
