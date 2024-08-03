@@ -60,7 +60,7 @@ function getWeatherEmoji(description) {
         case 'cielo claro': return '<i class="bi bi-sun"></i>';
         case 'algo de nubes': return '<i class="bi bi-cloud-sun"></i>';
         case 'nubes dispersas': return '<i class="bi bi-cloud"></i>';
-        case 'nubes quebradas': return '<i class="bi bi-cloud"></i>';
+        case 'muy nuboso': return '<i class="bi bi-clouds"></i>';
         case 'nubes': return '<i class="bi bi-clouds"></i>';
         case 'lluvia ligera': return '<i class="bi bi-cloud-drizzle"></i>';
         case 'lluvia moderada': return '<i class="bi bi-cloud-rain"></i>';
@@ -83,8 +83,6 @@ function displayWeatherData(data) {
         <p>Humedad: ${data.main.humidity}%</p>
         <p>Viento: ${data.wind.speed} m/s</p>
     `;
-
-    console.log(data);
 }
 
 function displayForecastData(data) {
