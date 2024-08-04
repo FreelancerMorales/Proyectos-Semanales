@@ -1,70 +1,66 @@
 /* Estilos de secciones */
-#data-section, #input-section {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    max-width: 800px;
-    margin: 1rem auto;
-    text-transform: capitalize;
-}
+    #data-section, #input-section {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        max-width: 800px;
+        margin: 1rem auto;
+        text-transform: capitalize;
+    }
 
-#data-container {
-    margin-top: 1.5rem;
-}
+    #data-container {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
 
-/* Estilos de inputs */
-#city-input {
-    padding: 0.75rem;
-    width: 70%;
-    margin-right: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
+/* Inputs */
+    #city-input {
+        padding: 0.75rem;
+        width: 70%;
+        margin-right: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
 
-#city-input:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
+    #city-input:focus {
+        border-color: var(--color-accent-secondary-light);
+        outline: none;
+    }
 
-/* Estilos loading */
-#loading {
-    margin: 3%;
-    font-size: 1.3rem;
-    margin-top: 1rem;
-    transition: all 0.3s ease;
-}
+/* Search History Start */
+    #history-section {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
-/* Estilos de historial de búsquedas */
-#history-section {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
+    #search-history {
+        list-style-type: none;
+        padding: 0;
+    }
 
-#search-history {
-    list-style-type: none;
-    padding: 0;
-}
+    #search-history li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #ccc;
+    }
 
-#search-history li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #ccc;
-}
+    #search-history li:last-child {
+        border-bottom: none;
+    }
 
-#search-history li:last-child {
-    border-bottom: none;
-}
+/* Search History End */
 
-/* Estilos de pronóstico extendido */
+/* Pronóstico extendido Start */
     #forecast-container {
+        text-align: center;
         display: flex;
         justify-content: space-around;
         margin-top: 2rem;
@@ -102,87 +98,97 @@
         margin: 1%
     }
 
-/* Estilos para el contenedor de autocompletado */
-#autocomplete-container {
-    position: relative;
-    width: 100%;
-}
+/* Pronóstico extendido End */
 
-.autocomplete-suggestions {
-    position: absolute;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    max-height: 150px;
-    overflow-y: auto;
-    z-index: 1000;
-}
+/* Autocompletado Start */
 
-.autocomplete-suggestion {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.autocomplete-suggestion:hover {
-    background: #f0f0f0;
-}
-
-/* Estilos de transiciones */
-#data-container, #forecast-container {
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-#loading.visible {
-    opacity: 1;
-    display: block;
-}
-
-#loading-animation.visible{
-    opacity: 1;
-    display: inline-block;
-}
-
-#loading-animation,
-#loading-animation:after {
-    box-sizing: border-box;
-}
-
-#loading-animation {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-}
-
-#loading-animation:after {
-    content: " ";
-    display: block;
-    border-radius: 50%;
-    width: 0;
-    height: 0;
-    margin: 8px;
-    box-sizing: border-box;
-    border: 32px solid currentColor;
-    border-color: currentColor transparent currentColor transparent;
-    animation: loading-animation 1.3s infinite;
-}
-
-#loading, #loading-animation {
-    opacity: 0;
-    display: none;
-}
-
-@keyframes loading-animation {
-    0% {
-    transform: rotate(0);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    #autocomplete-container {
+        position: relative;
+        width: 100%;
     }
-    50% {
-    transform: rotate(900deg);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    .autocomplete-suggestions {
+        position: absolute;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        max-height: 150px;
+        overflow-y: auto;
+        z-index: 1000;
     }
-    100% {
-    transform: rotate(1800deg);
+
+    .autocomplete-suggestion {
+        padding: 10px;
+        cursor: pointer;
     }
-}
+
+    .autocomplete-suggestion:hover {
+        background: #f0f0f0;
+    }
+
+/* Autocompletado End */
+
+/* loading Start */
+
+    #loading {
+        margin: 3%;
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    #loading.visible {
+        opacity: 1;
+        display: block;
+    }
+
+    #loading-animation.visible{
+        opacity: 1;
+        display: inline-block;
+    }
+
+    #loading-animation,
+    #loading-animation:after {
+        box-sizing: border-box;
+    }
+
+    #loading-animation {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    #loading-animation:after {
+        content: " ";
+        display: block;
+        border-radius: 50%;
+        width: 0;
+        height: 0;
+        margin: 8px;
+        box-sizing: border-box;
+        border: 32px solid currentColor;
+        border-color: currentColor transparent currentColor transparent;
+        animation: loading-animation 1.3s infinite;
+    }
+
+    #loading, #loading-animation {
+        opacity: 0;
+        display: none;
+    }
+
+    @keyframes loading-animation {
+        0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        100% {
+        transform: rotate(1800deg);
+        }
+    }
+
+/* Loading End */
