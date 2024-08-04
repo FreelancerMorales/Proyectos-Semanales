@@ -2,14 +2,18 @@
 
 function showLoading() {
     const loading = document.getElementById('loading');
+    const loadingAnimation = document.getElementById('loading-animation');
     loading.classList.add('visible');
+    loadingAnimation.classList.add('visible');
     document.getElementById('data-container').innerHTML = '';
     document.getElementById('forecast-container').innerHTML = '';
 }
 
 function hideLoading() {
     const loading = document.getElementById('loading');
+    const loadingAnimation = document.getElementById('loading-animation');
     loading.classList.remove('visible');
+    loadingAnimation.classList.remove('visible');
 }
 
 // Enter a Click

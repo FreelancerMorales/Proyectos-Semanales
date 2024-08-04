@@ -103,3 +103,13 @@
 /* Pronóstico extendido Start */
 
 /* Pronóstico Extendido End */
+
+/* Loading Start */
+#loading{
+    color: var(--color-accent-secondary-light);
+}
+
+.loading-animation {
+    color: var(--color-accent-secondary-hover-light);
+}
+/* Loading End */

@@ -34,7 +34,6 @@
 #loading {
     margin: 3%;
     font-size: 1.3rem;
-    color: #4CAF50;
     margin-top: 1rem;
     transition: all 0.3s ease;
 }
@@ -131,15 +130,54 @@
 /* Estilos de transiciones */
 #data-container, #forecast-container {
     transition: all 0.3s ease;
+    text-align: center;
 }
 
-#loading {
-    transition: opacity 0.3s ease;
+#loading, #loading-animation {
     opacity: 0;
     display: none;
 }
 
-#loading.visible {
+#loading.visible, #loading-animation.visible {
     opacity: 1;
     display: block;
+}
+
+.loading-animation,
+.loading-animation:after {
+    box-sizing: border-box;
+}
+
+.loading-animation {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.loading-animation:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid currentColor;
+    border-color: currentColor transparent currentColor transparent;
+    animation: loading-animation 1.3s infinite;
+}
+
+@keyframes loading-animation {
+    0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+    transform: rotate(1800deg);
+    }
 }

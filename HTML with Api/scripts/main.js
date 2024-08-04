@@ -105,7 +105,7 @@ function displayForecastData(data) {
 
 function handleError(error) {
     const dataContainer = document.getElementById('data-container');
-    dataContainer.innerHTML = `<p>No se pudieron obtener los datos. ${error.message}</p>`;
+    dataContainer.innerHTML = `<p>No se pudieron obtener los datos <br>${error.message}</p>`;
     console.error('Error:', error);
 }
 
