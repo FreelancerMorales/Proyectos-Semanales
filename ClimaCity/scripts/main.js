@@ -1,5 +1,3 @@
-// script.js
-
 document.getElementById('search-button').addEventListener('click', handleSearch);
 
 function handleSearch() {

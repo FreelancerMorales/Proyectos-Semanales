@@ -37,6 +37,10 @@
     h1, h2, h3{
         color: var(--color-accent-secondary-light);
     }
+
+    span{
+        color: var(--color-accent-secondary-light);
+    }
 /* Main Style End */
 
 /* Inputs Start */
@@ -97,6 +101,14 @@
     
     .btnHistory:hover{
         background-color: var(--color-error-hover-light);
+    }
+
+    .btn-icon{
+        color: var(--color-text-light);
+    }
+
+    .btn-icon:hover{
+        color: var(--color-accent-secondary-hover-light);
     }
 /* button and link End */
 
