@@ -17,12 +17,14 @@ body {
 
 /* Estilos de layout */
 header{
-    /* Header Fixed */
+    display: flex;
     position: fixed;
     width: 100%;
     top: 0;
-    height: 10%;
+    height: 65px;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
 
 header, footer {
@@ -33,7 +35,6 @@ header, footer {
 
 header {
     padding: 1.5rem 0;
-    margin-bottom: 2rem;
 }
 
 footer {
@@ -41,18 +42,10 @@ footer {
 }
 
 main {
-    margin-top: 10%;
+    margin-top: 35px;
     flex: 1;
     padding: 2rem;
     text-align: center;
-}
-
-a{
-    text-decoration: none;
-}
-
-li{
-    list-style: none;
 }
 
 /* Estilos de texto */
@@ -63,6 +56,20 @@ h1, h2 {
 
 p {
     margin-bottom: 1rem;
+}
+
+.title{
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
 }
 
 /* Estilos de botones */
