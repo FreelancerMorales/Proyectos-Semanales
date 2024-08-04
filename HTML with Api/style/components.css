@@ -143,19 +143,19 @@
     display: block;
 }
 
-.loading-animation,
-.loading-animation:after {
+#loading-animation,
+#loading-animation:after {
     box-sizing: border-box;
 }
 
-.loading-animation {
+#loading-animation {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
 }
 
-.loading-animation:after {
+#loading-animation:after {
     content: " ";
     display: block;
     border-radius: 50%;
