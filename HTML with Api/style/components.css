@@ -85,20 +85,22 @@
         font-size: 1.2rem;
         letter-spacing: 1px;
         padding-bottom: 3px;
-        border-bottom: 3px solid #4CAF50;
+        border-bottom: 3px solid var(--color-accent-secondary-light);
         margin-inline: auto;
         margin-bottom: 3%;
     }
 
     .forecast-temp{
-        
+        font-size: 1.1rem;
     }
 
     .forecast-weather{
+        font-size: 1.2rem;
     }
 
     .forecast-icon{
         font-size: 2rem;
+        margin: 1%
     }
 
 /* Estilos para el contenedor de autocompletado */
