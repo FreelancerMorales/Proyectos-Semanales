@@ -133,14 +133,14 @@
     text-align: center;
 }
 
-#loading, #loading-animation {
-    opacity: 0;
-    display: none;
-}
-
-#loading.visible, #loading-animation.visible {
+#loading.visible {
     opacity: 1;
     display: block;
+}
+
+#loading-animation.visible{
+    opacity: 1;
+    display: inline-block;
 }
 
 #loading-animation,
@@ -166,6 +166,11 @@
     border: 32px solid currentColor;
     border-color: currentColor transparent currentColor transparent;
     animation: loading-animation 1.3s infinite;
+}
+
+#loading, #loading-animation {
+    opacity: 0;
+    display: none;
 }
 
 @keyframes loading-animation {

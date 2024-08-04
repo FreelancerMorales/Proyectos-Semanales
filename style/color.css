@@ -109,7 +109,7 @@
     color: var(--color-accent-secondary-light);
 }
 
-.loading-animation {
+#loading-animation {
     color: var(--color-accent-secondary-hover-light);
 }
 /* Loading End */
