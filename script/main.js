@@ -2,22 +2,15 @@ function climaCity(){
     window.location.href = "ClimaCity/index.html";
 }
 
-function imgRight() {
-    const img = document.querySelectorAll(".weather");
-    const imgLeft = img[0];
-    const imgRight = img[1];
-    imgLeft.classList.remove("visible");
-    imgLeft.classList.add("invisible");
-    imgRight.classList.remove("invisible");
-    imgRight.classList.add("visible");
-}
+let currentImageIndex = 0;
 
-function imgLeft() {
-    const img = document.querySelectorAll(".weather");
-    const imgLeft = img[0];
-    const imgRight = img[1];
-    imgRight.classList.remove("visible");
-    imgRight.classList.add("invisible");
-    imgLeft.classList.remove("invisible");
-    imgLeft.classList.add("visible");
+function changeImage(direction) {
+    const images = document.querySelectorAll(".weather");
+    images[currentImageIndex].classList.remove("visible");
+    images[currentImageIndex].classList.add("invisible");
+
+    currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+
+    images[currentImageIndex].classList.remove("invisible");
+    images[currentImageIndex].classList.add("visible");
 }

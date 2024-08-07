@@ -36,6 +36,10 @@
     .forecast-title{
         width: 80%;
     }
+
+    .container-card{
+        
+    }
 }
 
 /* Diseño adicional para tablets */
@@ -46,5 +50,9 @@
 
     #city-input {
         width: 60%;
+    }
+
+    #directory{
+        width: 100%;
     }
 }
