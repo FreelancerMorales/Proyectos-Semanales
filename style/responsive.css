@@ -6,6 +6,7 @@
 
     header, footer, main {
         padding: 1rem;
+        max-width: 100%;
     }
 
     #data-section, #input-section, #history-section {
@@ -39,17 +40,47 @@
     }
 
     .container-card{
-        min-height: 30vh;
         flex-direction: column;
+        min-height: 60vh;
+        max-height: 60vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .card-description{
+        min-width: 95%;
+        max-width: 95%;
+    }
+
+    .img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+        max-width: 90%;
+        min-width: 90%;
+        min-height: 30vh;
+        max-height: 30vh;
     }
 
     .card-img{
-        margin-bottom: 5%;
+        min-width: 90%;
+        max-width: 90%;
+    }
+
+    .left-btn{
+        left: -60%;
+    }
+    
+    .right-btn{
+        left: 60%;
     }
 
     .card-img img{
-        width: 100%;
+        margin: auto;
+        width: auto;
         max-height: 30vh;
+        max-width: 100%;
     }
 }
 
@@ -65,5 +96,12 @@
 
     #directory{
         width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .container-card{
+        min-width: 80%;
+        max-width: 90%;
     }
 }
