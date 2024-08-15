@@ -1,4 +1,28 @@
 /* Diseño Responsivo */
+
+/* Diseño adicional para tablets */
+@media (max-width: 1024px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    #city-input {
+        width: 60%;
+    }
+
+    #directory{
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .container-card{
+        min-width: 90%;
+        max-width: 95%;
+    }
+}
+
+/* Diseño Mobil */
 @media (max-width: 768px) {
     body {
         padding: 0;
@@ -20,7 +44,7 @@
         margin-bottom: 1rem;
     }
 
-    button:not(.btnHistory) {
+    button:not(.btnHistory):not(.btn-icon) {
         width: 100%;
         display: inline-block;
     }
@@ -69,11 +93,11 @@
     }
 
     .left-btn{
-        left: -60%;
+        left: 0;
     }
     
     .right-btn{
-        left: 60%;
+        right: 0;
     }
 
     .card-img img{
@@ -81,27 +105,5 @@
         width: auto;
         max-height: 30vh;
         max-width: 110%;
-    }
-}
-
-/* Diseño adicional para tablets */
-@media (max-width: 1024px) {
-    main {
-        padding: 1.5rem;
-    }
-
-    #city-input {
-        width: 60%;
-    }
-
-    #directory{
-        width: 100%;
-    }
-}
-
-@media (max-width: 900px) {
-    .container-card{
-        min-width: 80%;
-        max-width: 90%;
     }
 }

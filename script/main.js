@@ -14,3 +14,8 @@ function changeImage(direction) {
     images[currentImageIndex].classList.remove("invisible");
     images[currentImageIndex].classList.add("visible");
 }
+
+document.getElementsByClassName("weather").addEventListener("click", function () {
+    let pende = document.getElementsByClassName('weather');
+    pende.style.opacity = "0.5";
+});
