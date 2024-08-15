@@ -10,24 +10,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3%;
     margin: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid black;
+    max-height: 50vh;
+    min-height: 50vh;
+    max-width: 90%;
+    min-width: 90%;
 }
 
 .card-img{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-inline: 5%;
+    min-width: 50%;
 }
 
-.img{
-    width: 100px;
+.img-container{
+    max-width: 100%;
+}
+
+.img-container img{
+    width: 100%;
+    max-height: 45vh;
+    cursor: pointer;
+}
+
+.card-description{
+    max-width: 50%;
+    min-width: 50%;
 }
 
 .card-img i{
     font-size: 2.5rem;
+}
+
+.left-btn{
+    position: absolute;
+    left: 0;
+}
+
+.right-btn{
+    position: absolute;
+    right: 0;
 }
 
 .btn-icon, .btn-icon:hover, .btn-icon:focus{

@@ -33,12 +33,23 @@
         width: 100%;
         margin: 0.5rem 0;
     }
+
     .forecast-title{
         width: 80%;
     }
 
     .container-card{
-        
+        min-height: 30vh;
+        flex-direction: column;
+    }
+
+    .card-img{
+        margin-bottom: 5%;
+    }
+
+    .card-img img{
+        width: 100%;
+        max-height: 30vh;
     }
 }
 

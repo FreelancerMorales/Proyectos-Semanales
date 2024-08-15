@@ -21,11 +21,13 @@
         <section id="directory">
             <div class="container-card">
                 <div class="card-img">
-                    <button class="btn-icon" onclick="changeImage(-1)"><i class="bi bi-caret-left"></i></button>
-                    <img src="src/clima-0.png" class="img weather visible" alt="Imagen Mobile">
-                    <img src="src/clima-1.png" class="img weather invisible" alt="Imagen PC">
-                    <button class="btn-icon" onclick="changeImage(1)"><i class="bi bi-caret-right"></i></button>
-                </div>                
+                    <button class="btn-icon left-btn" onclick="changeImage(-1)"><i class="bi bi-caret-left"></i></button>
+                    <div class="img-container">
+                        <img src="src/clima-0.png" class="img weather visible" alt="Imagen Mobile">
+                        <img src="src/clima-1.png" class="img weather invisible" alt="Imagen PC">
+                    </div>
+                    <button class="btn-icon right-btn" onclick="changeImage(1)"><i class="bi bi-caret-right"></i></button>
+                </div>
                 <div class="card-description">
                     <h2>ClimaCity</h2>
                     <p>Muestra el clima con la <span>API de OpenWeatherMap</span> por ciudad a tiempo real.</p>
