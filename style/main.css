@@ -18,20 +18,11 @@ body {
 
 /* Estilos de layout */
 header{
-    display: flex;
     position: fixed;
     width: 100%;
     top: 0;
     height: 65px;
     overflow: hidden;
-    align-items: center;
-    justify-content: center;
-}
-
-header, footer {
-    text-align: center;
-    padding: 1rem;
-    z-index: 10;
 }
 
 header {
@@ -40,6 +31,15 @@ header {
 
 footer {
     margin-top: 2rem;
+}
+
+header, footer {
+    padding: 1.5rem;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
@@ -59,8 +59,13 @@ p {
     margin-bottom: 1rem;
 }
 
-.title{
-    font-size: 2rem;
+#title{
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+footer > p{
     padding: 0;
     margin: 0;
 }
