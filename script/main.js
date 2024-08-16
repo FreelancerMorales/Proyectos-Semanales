@@ -15,7 +15,15 @@ function changeImage(direction) {
     images[currentImageIndex].classList.add("visible");
 }
 
-document.getElementsByClassName("weather").addEventListener("click", function () {
-    let pende = document.getElementsByClassName('weather');
-    pende.style.opacity = "0.5";
+document.querySelectorAll('.img').forEach(function(element) {
+    element.addEventListener("click", function () {
+        switch (element.classList[1]) {
+            case "weather":
+                // crear una copia del .card-img
+            break;
+
+            case "SegundoProyecto":
+            break;
+        }
+    });
 });
