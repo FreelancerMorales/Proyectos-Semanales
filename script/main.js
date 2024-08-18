@@ -4,8 +4,11 @@ function climaCity(){
 
 let currentImageIndex = 0;
 
-function changeImage(direction) {
-    const images = document.querySelectorAll(".weather");
+function changeImage(event, direction) {
+    const container = event.target.closest('.card-img'); 
+    const images = container.querySelectorAll(".img");
+    let currentImageIndex = Array.from(images).findIndex(img => img.classList.contains("visible"));
+
     images[currentImageIndex].classList.remove("visible");
     images[currentImageIndex].classList.add("invisible");
 
@@ -15,11 +18,18 @@ function changeImage(direction) {
     images[currentImageIndex].classList.add("visible");
 }
 
+
+
 document.querySelectorAll('.img').forEach(function(element) {
     element.addEventListener("click", function () {
         switch (element.classList[1]) {
             case "weather":
-                // crear una copia del .card-img
+                document.querySelector('#container-emergente').style.display = "block";
+                
+
+                document.querySelector('footer').classList.add('blur');
+                document.querySelector('main').classList.add('blur');
+                document.querySelector('header').classList.add('blur');
             break;
 
             case "SegundoProyecto":
@@ -27,3 +37,10 @@ document.querySelectorAll('.img').forEach(function(element) {
         }
     });
 });
+
+function exitZoom() {
+    document.querySelector('#container-emergente').style.display = "none";
+    document.querySelector('footer').classList.remove('blur');
+    document.querySelector('main').classList.remove('blur');
+    document.querySelector('header').classList.remove('blur');
+}

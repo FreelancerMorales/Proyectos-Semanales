@@ -125,3 +125,13 @@
     color: var(--color-accent-secondary-hover-light);
 }
 /* Loading End */
+
+/* Emergente Start */
+.exit-btn i{
+    color: var(--color-error-hover-light);
+}
+
+.exit-btn i:hover{
+    color: var(--color-error-light);
+}
+/* Emergente End */

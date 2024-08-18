@@ -77,3 +77,50 @@
 .invisible{
     display: none;
 }
+
+.blur{
+    filter: blur(2px);
+}
+
+#container-emergente{
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    z-index: 100;
+    min-height: 100vh;
+    max-height: 1000vh;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+#emergente-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 10%;
+}
+
+#emergente-img .card-img{
+    min-width: 90vw;
+    max-width: 90vw;
+    max-height: 90vh;
+    min-height: 90vh;
+}
+
+#emergente-img .img-container img{
+    max-height: 80vh;
+}
+
+.exit-btn{
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+
+.exit-btn i{
+    font-size: 3.5rem;
+}

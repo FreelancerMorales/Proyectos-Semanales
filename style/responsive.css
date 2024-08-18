@@ -106,4 +106,14 @@
         max-height: 30vh;
         max-width: 110%;
     }
+
+    #emergente-img .img-container{
+        min-height: 100vh;
+        max-height: 100vh;
+        margin-top: 20%;
+    }
+
+    #emergente-img .img-container .card-img img{
+        max-width: 100%;
+    }
 }
