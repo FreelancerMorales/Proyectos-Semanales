@@ -69,6 +69,8 @@
         max-height: 60vh;
         margin: 0;
         padding: 0;
+        min-width: 90vw;
+        max-width: 90vw;
     }
 
     .card-description{
@@ -88,8 +90,8 @@
     }
 
     .card-img{
-        min-width: 90%;
-        max-width: 90%;
+        min-width: 100%;
+        max-width: 100%;
     }
 
     .left-btn{
@@ -104,16 +106,16 @@
         margin: auto;
         width: auto;
         max-height: 30vh;
-        max-width: 110%;
+        max-width: 100%;
     }
 
     #emergente-img .img-container{
-        min-height: 100vh;
-        max-height: 100vh;
-        margin-top: 20%;
+        min-height: 85vh;
+        max-height: 85vh;
+        background-color: aqua;
     }
 
-    #emergente-img .img-container .card-img img{
-        max-width: 100%;
+    #emergente-img .img-container img{
+        max-width: 90%;
     }
 }

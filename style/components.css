@@ -88,11 +88,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    align-content: center;
 
     z-index: 100;
     min-height: 100vh;
-    max-height: 1000vh;
+    max-height: 100vh;
     min-width: 100%;
     max-width: 100%;
 }
@@ -105,20 +105,20 @@
 }
 
 #emergente-img .card-img{
-    min-width: 90vw;
-    max-width: 90vw;
-    max-height: 90vh;
-    min-height: 90vh;
+    min-width: 98vw;
+    max-width: 98vw;
+    max-height: 85vh;
+    min-height: 85vh;
 }
 
 #emergente-img .img-container img{
-    max-height: 80vh;
+    max-height: 70vh;
 }
 
 .exit-btn{
     position: absolute;
-    top: 2%;
-    right: 3%;
+    top: 0%;
+    right: 5%;
 }
 
 .exit-btn i{
