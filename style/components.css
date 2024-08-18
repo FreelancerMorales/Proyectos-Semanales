@@ -28,6 +28,14 @@
     min-width: 50%;
 }
 
+.img:hover{
+    cursor: default;
+}
+
+.container-card img:hover{
+    cursor: zoom-in;
+}
+
 .img-container{
     max-width: 90%;
 }
