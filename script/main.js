@@ -1,6 +1,9 @@
 function climaCity(){
     window.location.href = "ClimaCity/index.html";
 }
+function calculadora(){
+    window.location.href = "Calculadora/index.html";
+}
 
 let currentImageIndex = 0;
 
