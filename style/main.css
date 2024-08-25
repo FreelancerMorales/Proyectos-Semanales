@@ -28,6 +28,32 @@ header {
     padding: 1.5rem 0;
 }
 
+header > nav{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > ol{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+}
+
+ol li{
+    display: inline-block;
+    margin: auto 6%;
+}
+
+li > h1{
+    background-color: red;
+}
+
 footer {
     margin-top: 2rem;
 }
