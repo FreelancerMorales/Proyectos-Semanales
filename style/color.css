@@ -8,7 +8,7 @@ body {
 }
 
 header, footer {
-  background-color: #FFFFFF;
+  background-color: #F5F5F5;
   border-bottom: 1px solid #757575;
   border-top: 1px solid #757575;
 }
@@ -113,4 +113,8 @@ button:focus {
   color: #D32F2F;
 }
 
-/* Emergente End *//*# sourceMappingURL=color.css.map */
+/* Emergente End */
+li a {
+  color: #018786;
+  border-right: 1px solid #757575;
+}/*# sourceMappingURL=color.css.map */

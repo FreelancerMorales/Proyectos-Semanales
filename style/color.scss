@@ -27,7 +27,7 @@
     }
 
     header, footer{
-        background-color: $--color-bg-light;
+        background-color: $--color-bg-secondary-light;
         border-bottom: 1px solid $--color-text-secondary-light;
         border-top: 1px solid $--color-text-secondary-light;
     }
@@ -133,3 +133,8 @@
     color: $--color-error-light;
 }
 /* Emergente End */
+
+li  a{
+    color: $--color-accent-secondary-light;
+    border-right: 1px solid $--color-text-secondary-light;
+}
